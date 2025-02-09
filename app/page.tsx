@@ -14,6 +14,7 @@ export default function Base64Tool() {
       const encoded = btoa(input)
       setOutput(encoded)
     } catch (error) {
+      console.error(error)
       setOutput("Error: Unable to encode. Make sure you are using valid characters.")
     }
   }
@@ -23,6 +24,7 @@ export default function Base64Tool() {
       const decoded = atob(input)
       setOutput(decoded)
     } catch (error) {
+      console.error(error)
       setOutput("Error: Unable to decode. Make sure you are using a valid Base64 string.")
     }
   }
